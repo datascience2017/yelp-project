@@ -13,9 +13,15 @@ import pandas as pd
 
 run = wandb.init()
 config = run.config
+summary = run.summary
+
 df = pd.read_csv('yelp.csv')
 
 text = df['text']
 target = df['sentiment']
 
 print(text[0])
+
+summary.acc = 0.0
+summary.val_acc = 0.0
+
