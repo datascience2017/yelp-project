@@ -22,6 +22,5 @@ target = df['sentiment']
 
 print(text[0])
 
-summary.acc = 0.0
-summary.val_acc = 0.0
+
 
