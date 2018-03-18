@@ -9,9 +9,13 @@ from keras.preprocessing.text import Tokenizer
 from keras.preprocessing.sequence import pad_sequences
 from keras.utils import np_utils
 
+import pandas as pd
+
 run = wandb.init()
 config = run.config
-df = pd.read_csv('output.csv')
+df = pd.read_csv('yelp.csv')
 
 text = df['text']
 target = df['sentiment']
+
+print(text[0])
